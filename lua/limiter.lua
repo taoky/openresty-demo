@@ -27,3 +27,7 @@ if not delay then
     end
     return ngx.exit(ngx.HTTP_INTERNAL_SERVER_ERROR)
 end
+
+if delay >= 0.001 then
+    ngx.sleep(delay)
+end
